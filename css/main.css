@@ -1084,7 +1084,7 @@ header {
 	width: 100%;
 	min-height: 66px;
 	z-index: 600;
-	border-radius: 100px;
+	border-radius: 40px;
 }
 header .row {
 	position: relative;
@@ -1241,6 +1241,7 @@ header{
 	height: auto;
 	clear: both;
 	display: none;
+	border-radius: 10px 10px 10px 10px;
 }
 .main-navigation > li {
 	display: block;
@@ -1518,6 +1519,7 @@ header{
 .intro-info .lead {
 	text-align: left;
 	padding-left: 13rem;
+	padding-top: 20px;
 }
 
 .about-content {
