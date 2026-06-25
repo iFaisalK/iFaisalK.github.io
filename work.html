@@ -34,95 +34,71 @@
   <main id="main"><span id="top"></span>
 
     <section class="page-header wrap">
-      <p class="eyebrow reveal"><span class="dot"></span> Selected Work</p>
-      <h1 class="page-title reveal" style="--d:.06s">A platform that reviews regulatory content across&nbsp;markets.</h1>
+      <p class="eyebrow reveal"><span class="dot"></span> Application Developer @ IBM</p>
+      <h1 class="page-title reveal" style="--d:.06s">Building production <em class="grad">GenAI</em> on AWS at&nbsp;IBM.</h1>
       <p class="page-lede reveal" style="--d:.12s">
-        At IBM I build and maintain a serverless, multi-market compliance-analysis platform.
-        Event-driven microservices coordinate the work; Amazon&nbsp;Bedrock does the reasoning.
-        Here's how it fits together — and the pieces I've shipped.
+        At IBM I integrate large language models into enterprise applications — retrieval-augmented
+        generation, AI guardrails, and model tuning — on a serverless AWS stack, shipped through a
+        disciplined CI/CD pipeline.
       </p>
     </section>
 
     <section class="section section--tight wrap">
       <!-- Architecture diagram -->
       <figure class="diagram reveal" aria-labelledby="diagram-cap">
-        <div class="diagram__tag">Event-driven pipeline</div>
-        <svg class="arch" viewBox="0 0 960 380" role="img" aria-labelledby="diagram-cap" preserveAspectRatio="xMidYMid meet">
+        <div class="diagram__tag">Retrieval-augmented generation</div>
+        <svg class="arch" viewBox="0 0 980 126" role="img" aria-labelledby="diagram-cap" preserveAspectRatio="xMidYMid meet">
           <g class="arch__flow">
-            <line x1="190" y1="200" x2="258" y2="200" /><line x1="430" y1="200" x2="498" y2="200" /><line x1="670" y1="200" x2="738" y2="200" />
+            <line x1="176" y1="63" x2="216" y2="63" /><line x1="372" y1="63" x2="412" y2="63" /><line x1="568" y1="63" x2="608" y2="63" /><line x1="764" y1="63" x2="804" y2="63" />
           </g>
           <g class="arch__head">
-            <path d="M258,200 l-9,-5 v10 z" /><path d="M498,200 l-9,-5 v10 z" /><path d="M738,200 l-9,-5 v10 z" />
+            <path d="M216,63 l-9,-5 v10 z" /><path d="M412,63 l-9,-5 v10 z" /><path d="M608,63 l-9,-5 v10 z" /><path d="M804,63 l-9,-5 v10 z" />
           </g>
-          <g class="arch__link">
-            <path d="M520,82 C520,130 584,128 584,168" /><path d="M650,82 C700,130 834,128 834,168" />
-          </g>
-          <g class="arch__link arch__link--state">
-            <path d="M344,232 L344,288" /><path d="M584,232 L584,288" />
-          </g>
-          <g class="node node--accent">
-            <rect x="320" y="28" width="320" height="54" rx="8" />
-            <text x="480" y="50" class="node__t">Amazon Bedrock</text>
-            <text x="480" y="68" class="node__s">Claude · Llama — reasoning</text>
-          </g>
-          <g class="node">
-            <rect x="30" y="170" width="160" height="60" rx="8" />
-            <text x="110" y="195" class="node__t">Planner</text><text x="110" y="214" class="node__s">λ orchestrates</text>
-          </g>
-          <g class="node node--queue">
-            <rect x="258" y="170" width="172" height="60" rx="8" />
-            <text x="344" y="195" class="node__t">Amazon SQS</text><text x="344" y="214" class="node__s">work queue</text>
-          </g>
-          <g class="node">
-            <rect x="498" y="170" width="172" height="60" rx="8" />
-            <text x="584" y="195" class="node__t">Worker</text><text x="584" y="214" class="node__s">λ analyses</text>
-          </g>
-          <g class="node">
-            <rect x="738" y="170" width="192" height="60" rx="8" />
-            <text x="834" y="195" class="node__t">Validator</text><text x="834" y="214" class="node__s">λ verifies</text>
-          </g>
-          <g class="node node--store">
-            <rect x="264" y="288" width="160" height="54" rx="8" />
-            <text x="344" y="312" class="node__t">DynamoDB</text><text x="344" y="330" class="node__s">state &amp; config</text>
-          </g>
-          <g class="node node--store">
-            <rect x="504" y="288" width="160" height="54" rx="8" />
-            <text x="584" y="312" class="node__t">Amazon S3</text><text x="584" y="330" class="node__s">documents</text>
-          </g>
+          <g class="node"><rect x="20" y="28" width="156" height="70" rx="8" /><text x="98" y="58" class="node__t">Query</text><text x="98" y="78" class="node__s">user question</text></g>
+          <g class="node"><rect x="216" y="28" width="156" height="70" rx="8" /><text x="294" y="58" class="node__t">Retrieval</text><text x="294" y="78" class="node__s">RAG · embeddings</text></g>
+          <g class="node node--accent"><rect x="412" y="28" width="156" height="70" rx="8" /><text x="490" y="58" class="node__t">Amazon Bedrock</text><text x="490" y="78" class="node__s">Claude — the LLM</text></g>
+          <g class="node"><rect x="608" y="28" width="156" height="70" rx="8" /><text x="686" y="58" class="node__t">Guardrails</text><text x="686" y="78" class="node__s">validate · on-policy</text></g>
+          <g class="node node--store"><rect x="804" y="28" width="156" height="70" rx="8" /><text x="882" y="58" class="node__t">Response</text><text x="882" y="78" class="node__s">grounded answer</text></g>
         </svg>
-        <figcaption id="diagram-cap" class="diagram__cap">Planner → SQS → Worker → Validator, with Bedrock for analysis and DynamoDB/S3 for state. Simplified.</figcaption>
+        <figcaption id="diagram-cap" class="diagram__cap">A standard RAG pipeline — built on AWS Lambda, Amazon Bedrock, S3 and DynamoDB.</figcaption>
       </figure>
 
       <ol class="cases">
         <li class="case reveal">
           <span class="case__num">01</span>
-          <div class="case__body"><h3>RAG compliance chatbot</h3>
-            <p>Q&amp;A over a domain knowledge base with multiple retrieval strategies, an extended-reasoning mode, and content segregation by business function.</p></div>
-          <ul class="case__tags"><li>Bedrock</li><li>Claude</li><li>RAG</li><li>Embeddings</li></ul>
+          <div class="case__body"><h3>Generative AI integration</h3>
+            <p>Integrating large language models — Amazon Bedrock and Anthropic Claude — into enterprise applications, with multiple retrieval strategies and an extended-reasoning mode.</p></div>
+          <ul class="case__tags"><li>Bedrock</li><li>Claude</li><li>LLM</li></ul>
         </li>
         <li class="case reveal">
           <span class="case__num">02</span>
-          <div class="case__body"><h3>Requirement-validation engine</h3>
-            <p>Validates content against requirements through a feedback loop and market-specific knowledge-base querying. Built with unit tests for confidence.</p></div>
-          <ul class="case__tags"><li>Lambda</li><li>Prompt eng.</li><li>pytest</li></ul>
+          <div class="case__body"><h3>Retrieval-augmented generation</h3>
+            <p>RAG over domain knowledge bases — embeddings and semantic retrieval with content segregation by business function — for grounded, relevant answers.</p></div>
+          <ul class="case__tags"><li>RAG</li><li>Embeddings</li><li>Knowledge bases</li></ul>
         </li>
         <li class="case reveal">
           <span class="case__num">03</span>
-          <div class="case__body"><h3>Multi-step approval workflow</h3>
-            <p>End-to-end approvals with delegation, role-based assignment, and confidential-submission access controls across the Lambda back end and React front end.</p></div>
-          <ul class="case__tags"><li>Lambda</li><li>React</li><li>DynamoDB</li><li>RBAC</li></ul>
+          <div class="case__body"><h3>AI guardrails &amp; validation</h3>
+            <p>Automated validation with feedback loops keeps model outputs accurate, safe and on-policy — turning probabilistic models into dependable workflows.</p></div>
+          <ul class="case__tags"><li>Guardrails</li><li>Validation</li><li>Reliability</li></ul>
         </li>
         <li class="case reveal">
           <span class="case__num">04</span>
-          <div class="case__body"><h3>Document-processing pipeline</h3>
-            <p>PowerPoint → PDF conversion on containerized LibreOffice on ECS — including chasing down and fixing image-cropping defects via font embedding.</p></div>
-          <ul class="case__tags"><li>ECS</li><li>Docker</li><li>S3</li><li>Textract</li></ul>
+          <div class="case__body"><h3>Model tuning &amp; prompt engineering</h3>
+            <p>Migrating and tuning models with dynamic prompt configurations and evaluation — getting the right behaviour from the right model for each market.</p></div>
+          <ul class="case__tags"><li>Prompt eng.</li><li>Tuning</li><li>Evaluation</li></ul>
         </li>
         <li class="case reveal">
           <span class="case__num">05</span>
-          <div class="case__body"><h3>SES notification system</h3>
-            <p>Delivery-status notifications with recipient de-duplication by address and exclusion of prior actors — quiet reliability where it counts.</p></div>
-          <ul class="case__tags"><li>Amazon SES</li><li>DynamoDB</li></ul>
+          <div class="case__body"><h3>Serverless AWS backend</h3>
+            <p>Python on AWS Lambda with S3, DynamoDB, SQS and API Gateway — scalable, event-driven services powering the AI features behind the scenes.</p></div>
+          <ul class="case__tags"><li>Lambda</li><li>DynamoDB</li><li>S3</li><li>SQS</li></ul>
+        </li>
+        <li class="case reveal">
+          <span class="case__num">06</span>
+          <div class="case__body"><h3>CI/CD &amp; delivery</h3>
+            <p>Shipping through a disciplined pipeline — Jenkins, SonarQube and JFrog — with Git branching across development, QA and production.</p></div>
+          <ul class="case__tags"><li>Jenkins</li><li>SonarQube</li><li>JFrog</li><li>Git</li></ul>
         </li>
       </ol>
     </section>
