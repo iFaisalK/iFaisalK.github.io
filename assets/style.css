@@ -47,7 +47,8 @@ main { flex: 1; }
 a { color: inherit; text-decoration: none; }
 strong { font-weight: 600; }
 .accent { color: var(--accent); }
-.grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+.grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; font-style: normal; padding-right: .06em; }
+.page-title em { font-style: normal; }
 
 .wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gut); }
 
