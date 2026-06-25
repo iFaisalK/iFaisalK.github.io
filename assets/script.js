@@ -5,22 +5,6 @@
 (function () {
   "use strict";
 
-  /* ---------- live local clock (Kolkata) ---------- */
-  var clock = document.getElementById("clock");
-  function tick() {
-    if (!clock) return;
-    try {
-      var t = new Date().toLocaleTimeString("en-GB", {
-        timeZone: "Asia/Kolkata", hour: "2-digit", minute: "2-digit",
-      });
-      clock.textContent = "Kolkata " + t;
-    } catch (e) {
-      clock.textContent = "Kolkata, IN";
-    }
-  }
-  tick();
-  setInterval(tick, 15000);
-
   /* ---------- year ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
