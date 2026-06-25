@@ -46,28 +46,6 @@
     reveals.forEach(function (el) { el.classList.add("in"); });
   }
 
-  /* ---------- active section in nav ---------- */
-  var links = Array.prototype.slice.call(document.querySelectorAll(".nav a"));
-  var map = {};
-  links.forEach(function (a) {
-    var id = a.getAttribute("href").slice(1);
-    var sec = document.getElementById(id);
-    if (sec) map[id] = a;
-  });
-  var sections = Object.keys(map).map(function (id) { return document.getElementById(id); });
-  if ("IntersectionObserver" in window && sections.length) {
-    var so = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) {
-          links.forEach(function (l) { l.classList.remove("is-active"); });
-          var active = map[en.target.id];
-          if (active) active.classList.add("is-active");
-        }
-      });
-    }, { rootMargin: "-45% 0px -50% 0px" });
-    sections.forEach(function (s) { so.observe(s); });
-  }
-
   /* ---------- copy email ---------- */
   document.querySelectorAll(".copy").forEach(function (btn) {
     btn.addEventListener("click", function () {
