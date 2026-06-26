@@ -110,7 +110,7 @@ strong { font-weight: 600; }
 .hero__portrait img { width: 100%; height: auto; display: block; aspect-ratio: 1; object-fit: cover; }
 .hero__portrait::after { content: ""; position: absolute; inset: auto -18px -18px auto; width: 70%; height: 70%; border-radius: 24px; background: var(--grad); z-index: -1; opacity: .9; filter: blur(2px); }
 .hero__badge { position: absolute; left: -14px; bottom: 24px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-sm); border-radius: 14px; padding: 12px 16px; font: 500 12.5px var(--mono); }
-.hero__badge b { display: block; font-weight: 600; color: var(--ink); }
+.hero__badge-logo { height: 21px; width: auto; display: block; margin-bottom: 8px; }
 .hero__badge span { color: var(--ink-2); }
 
 .btn { display: inline-flex; align-items: center; gap: 7px; font: 500 13px var(--mono); padding: 13px 22px; border-radius: 100px; border: 1px solid var(--line); color: var(--ink); background: var(--surface); transition: transform .25s var(--ease), border-color .25s, color .25s, box-shadow .25s; }
