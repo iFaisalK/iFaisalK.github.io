@@ -15,109 +15,186 @@
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <span id="top"></span>
 
   <header class="site-header" id="siteHeader">
     <div class="wrap header-inner">
-      <a href="index.html" class="wordmark">Faisal Khan<span class="wordmark__dot">.</span></a>
+      <a href="#top" class="wordmark">Faisal Khan<span class="dot">.</span></a>
       <nav class="nav" aria-label="Primary">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="work.html">Work</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
       <div class="header-aside">
-        <a class="header-cta" href="contact.html">Get in touch</a>
+        <a class="header-cta" href="#contact">Get in touch</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
       </div>
     </div>
   </header>
 
-  <main id="main"><span id="top"></span>
+  <main id="main">
 
-    <!-- HERO -->
-    <section class="hero on-navy">
-      <div class="wrap hero__inner">
-        <div class="hero__text">
-          <p class="eyebrow eyebrow--ibm reveal">
-            <span class="ibm-pill"><img src="assets/ibm-logo.svg" alt="IBM" width="40" height="17" /></span>
-            Backend · Cloud · AI
-          </p>
-          <h1 class="hero__title reveal" style="--d:.06s">
-            <span>Software engineer</span>
-            <span>at IBM.</span>
-          </h1>
-          <p class="hero__lede reveal" style="--d:.14s">
-            I work across backend, cloud and applied AI, turning ambiguous problems into well-built,
-            well-tested software. Previously a full-stack developer.
-          </p>
-          <div class="hero__cta reveal" style="--d:.22s">
-            <a class="btn btn--solid" href="work.html">See selected work</a>
-            <a class="btn btn--ghost" href="Faisal-Khan-Resume.pdf" target="_blank" rel="noopener">Résumé <span aria-hidden="true">↗</span></a>
+    <!-- ===================== BENTO HERO ===================== -->
+    <section class="wrap" style="padding-top: clamp(20px,4vh,40px)">
+      <div class="bento">
+
+        <div class="tile intro c2 r2 reveal">
+          <div class="intro__top"><span class="label">Backend · Cloud · AI</span></div>
+          <h1>Software engineer<br>at <span class="accent">IBM.</span></h1>
+          <p>I work across backend, cloud and applied AI, turning ambiguous problems into well-built, well-tested software. Previously a full-stack developer.</p>
+          <div class="intro__cta">
+            <a class="btn btn--solid" href="#work">See my work</a>
+            <a class="btn btn--ghost" href="Faisal-Khan-Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
           </div>
         </div>
 
-        <div class="hero__portrait reveal" style="--d:.18s">
-          <span class="accent-block"></span>
-          <div class="frame"><img src="assets/portrait.png" alt="Portrait of Faisal Khan" width="612" height="612" /></div>
-          <div class="hero__chip">
-            <img src="assets/ibm-logo.svg" alt="IBM" width="42" height="18" />
-            <span class="bar"></span>
-            <span>Software Engineer</span>
-          </div>
+        <div class="tile photo r2 reveal" style="--d:.05s">
+          <img src="assets/portrait.png" alt="Portrait of Faisal Khan" width="612" height="612" />
         </div>
-      </div>
-    </section>
 
-    <!-- WHAT I DO -->
-    <section class="section wrap">
-      <div class="section-head reveal">
-        <span class="kicker">Focus areas</span>
-        <h2 class="section-title">What I build at IBM</h2>
-      </div>
-      <div class="highlights">
-        <div class="hl reveal">
-          <span class="hl__n">01</span>
+        <div class="tile tile--dark mini ibm-tile reveal" style="--d:.1s">
+          <span class="mini__k">Currently</span>
+          <img src="assets/ibm-logo.svg" alt="IBM" height="26" />
+          <span class="mini__v">Software Engineer</span>
+        </div>
+
+        <a class="tile tile--accent arrow-cta tile--link reveal" href="Faisal-Khan-Resume.pdf" target="_blank" rel="noopener" style="--d:.15s">
+          <span class="mini__k">Download</span>
+          <span class="big">Résumé</span>
+          <span class="go">↓</span>
+        </a>
+
+        <div class="tile focus tile--dark reveal" style="--d:.1s">
+          <span class="focus__n">01</span>
           <h3>Generative AI</h3>
-          <p>LLM integration, retrieval-augmented generation over knowledge bases, and guardrails, with Amazon Bedrock and Anthropic Claude.</p>
+          <p>LLM integration, RAG over knowledge bases, and guardrails with Amazon Bedrock and Claude.</p>
         </div>
-        <div class="hl reveal" style="--d:.08s">
-          <span class="hl__n">02</span>
+        <div class="tile focus reveal" style="--d:.15s">
+          <span class="focus__n">02</span>
           <h3>AWS Cloud</h3>
-          <p>Python serverless on AWS Lambda, S3, DynamoDB and SQS: scalable, event-driven backends powering the AI features.</p>
+          <p>Python serverless on AWS Lambda, S3, DynamoDB and SQS. Event-driven backends.</p>
         </div>
-        <div class="hl reveal" style="--d:.16s">
-          <span class="hl__n">03</span>
-          <h3>CI/CD &amp; Delivery</h3>
-          <p>Shipping with Jenkins, SonarQube and JFrog, and disciplined Git branching across development, QA and production.</p>
+        <div class="tile focus reveal" style="--d:.2s">
+          <span class="focus__n">03</span>
+          <h3>CI/CD</h3>
+          <p>Jenkins, SonarQube and JFrog, with disciplined Git across dev, QA and production.</p>
+        </div>
+        <div class="tile mini reveal" style="--d:.25s">
+          <span class="mini__k">Based in</span>
+          <span class="mini__v">Kolkata, India</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== WORK ===================== -->
+    <section class="section wrap" id="work">
+      <div class="section__head reveal">
+        <div>
+          <span class="label">Selected work</span>
+          <h2>Production GenAI on AWS at IBM.</h2>
+        </div>
+        <p>I integrate large language models into enterprise applications: RAG, guardrails, model tuning, serverless and CI/CD.</p>
+      </div>
+      <div class="work-grid">
+        <div class="workcard reveal"><span class="workcard__num">01</span><h3>Generative AI integration</h3><p>Integrating large language models (Amazon Bedrock and Anthropic Claude) into enterprise applications, with multiple retrieval strategies and an extended-reasoning mode.</p><div class="workcard__tags"><span>Bedrock</span><span>Claude</span><span>LLM</span></div></div>
+        <div class="workcard reveal"><span class="workcard__num">02</span><h3>Retrieval-augmented generation</h3><p>RAG over domain knowledge bases, embeddings and semantic retrieval with content segregation by business function, for grounded, relevant answers.</p><div class="workcard__tags"><span>RAG</span><span>Embeddings</span><span>Knowledge bases</span></div></div>
+        <div class="workcard reveal"><span class="workcard__num">03</span><h3>AI guardrails &amp; validation</h3><p>Automated validation with feedback loops keeps model outputs accurate, safe and on-policy, turning probabilistic models into dependable workflows.</p><div class="workcard__tags"><span>Guardrails</span><span>Validation</span><span>Reliability</span></div></div>
+        <div class="workcard reveal"><span class="workcard__num">04</span><h3>Model tuning &amp; prompt engineering</h3><p>Migrating and tuning models with dynamic prompt configurations and evaluation, getting the right behaviour from the right model for each market.</p><div class="workcard__tags"><span>Prompt eng.</span><span>Tuning</span><span>Evaluation</span></div></div>
+        <div class="workcard reveal"><span class="workcard__num">05</span><h3>Serverless AWS backend</h3><p>Python on AWS Lambda with S3, DynamoDB, SQS and API Gateway. Scalable, event-driven services powering the AI features.</p><div class="workcard__tags"><span>Lambda</span><span>DynamoDB</span><span>S3</span><span>SQS</span></div></div>
+        <div class="workcard reveal"><span class="workcard__num">06</span><h3>CI/CD &amp; delivery</h3><p>Shipping through a disciplined pipeline (Jenkins, SonarQube and JFrog) with Git branching across development, QA and production.</p><div class="workcard__tags"><span>Jenkins</span><span>SonarQube</span><span>JFrog</span><span>Git</span></div></div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE / ABOUT ===================== -->
+    <section class="section wrap" id="about">
+      <div class="section__head reveal">
+        <div>
+          <span class="label">Experience</span>
+          <h2>Where I've worked.</h2>
+        </div>
+        <p>B.Tech in Electronics &amp; Communications, Heritage Institute of Technology (CGPA 8.6). Based in Kolkata, India.</p>
+      </div>
+      <div class="exp-grid">
+        <div class="exp reveal">
+          <span class="exp__yr">2025 to Present</span>
+          <span class="exp__type">Full-time</span>
+          <h3>Software Engineer <span class="exp__org">IBM</span></h3>
+          <p>Integrate LLMs (Bedrock, Claude) into a production GenAI platform: RAG, guardrails and model tuning. Build the serverless AWS backend and ship via a CI/CD pipeline with disciplined Git branching.</p>
+        </div>
+        <div class="exp reveal" style="--d:.08s">
+          <span class="exp__yr">2024</span>
+          <span class="exp__type">Apprenticeship</span>
+          <h3>Cloud Full Stack <span class="exp__org">IBM</span></h3>
+          <p>Cloud full-stack development across the same platform, ramping into serverless architecture, AWS services and disciplined Git workflows.</p>
+        </div>
+        <div class="exp reveal" style="--d:.16s">
+          <span class="exp__yr">2023 to 2024</span>
+          <span class="exp__type">Internship</span>
+          <h3>Full Stack Developer <span class="exp__org">TeleMatrix</span></h3>
+          <p>Built web applications end to end: front end in HTML/CSS, JavaScript and React, back end in Node.js, Express and Python.</p>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <div class="cta-band wrap">
-      <div class="cta-card on-navy">
-        <div class="cta-card__in">
-          <h2>See the AI work at IBM.</h2>
-          <p>Explore the GenAI platform I build at IBM: RAG, guardrails, AWS, and the CI/CD behind it.</p>
-          <div class="hero__cta">
-            <a class="btn btn--solid" href="work.html">View selected work</a>
-            <a class="btn btn--ghost" href="contact.html">Get in touch</a>
-          </div>
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section wrap">
+      <div class="section__head reveal">
+        <div>
+          <span class="label">Capabilities</span>
+          <h2>What I work with.</h2>
         </div>
       </div>
-    </div>
+      <div class="skills-grid">
+        <div class="skillset reveal"><h3>AI / GenAI</h3><ul><li>Amazon Bedrock</li><li>Anthropic Claude</li><li>RAG &amp; knowledge bases</li><li>AI guardrails &amp; validation</li><li>Prompt engineering &amp; tuning</li><li>Embeddings (Titan, Cohere)</li></ul></div>
+        <div class="skillset reveal" style="--d:.06s"><h3>Cloud / Backend</h3><ul><li>Python</li><li>AWS Lambda, Serverless</li><li>S3, DynamoDB, SQS</li><li>SES, Cognito, API Gateway</li><li>Textract, REST APIs</li><li>Microservices</li></ul></div>
+        <div class="skillset reveal" style="--d:.12s"><h3>DevOps / CI-CD</h3><ul><li>Jenkins, SonarQube, JFrog</li><li>Git, Bitbucket</li><li>Docker, ECS</li><li>CloudWatch</li></ul></div>
+        <div class="skillset reveal"><h3>Frontend</h3><ul><li>JavaScript (ES6+)</li><li>React.js</li><li>HTML &amp; CSS</li><li>Responsive design</li></ul></div>
+        <div class="skillset reveal" style="--d:.06s"><h3>Databases</h3><ul><li>DynamoDB, NoSQL modeling</li><li>MySQL</li></ul></div>
+        <div class="skillset reveal" style="--d:.12s"><h3>Languages</h3><ul><li>Python</li><li>JavaScript</li><li>C++</li><li>SQL, Java</li></ul></div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section wrap" id="contact">
+      <div class="section__head reveal">
+        <div>
+          <span class="label">Contact</span>
+          <h2>Let's build something good.</h2>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <div class="tile tile--dark contact-main c2 r2 reveal">
+          <span class="mini__k">Drop me a line, I read everything</span>
+          <a class="email" href="mailto:faisalak056@gmail.com">faisalak056@gmail.com <span>↗</span></a>
+        </div>
+        <a class="tile tile--accent social mini tile--link reveal" href="https://www.linkedin.com/in/ifaisalk/" target="_blank" rel="noopener" style="--d:.06s">
+          <span class="mini__k">LinkedIn</span>
+          <span class="mini__v">in/ifaisalk ↗</span>
+        </a>
+        <a class="tile social mini tile--link reveal" href="https://github.com/iFaisalK" target="_blank" rel="noopener" style="--d:.12s">
+          <span class="mini__k">GitHub</span>
+          <span class="mini__v">iFaisalK ↗</span>
+        </a>
+        <a class="tile social mini c2 tile--link reveal" href="Faisal-Khan-Resume.pdf" target="_blank" rel="noopener" style="--d:.18s">
+          <span class="mini__k">Résumé</span>
+          <span class="mini__v">Download PDF ↓</span>
+        </a>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <span class="colophon">Designed &amp; built by <strong>Faisal Khan</strong> · Kolkata</span>
-      <span class="copy-year">© <span id="year">2026</span> Faisal Khan</span>
-      <a href="#top" class="to-top">Back to top <span aria-hidden="true">↑</span></a>
+      <span>Designed &amp; built by <strong>Faisal Khan</strong> · Kolkata</span>
+      <span>© <span id="year">2026</span> Faisal Khan</span>
+      <a href="#top" class="to-top">Back to top ↑</a>
     </div>
   </footer>
 
