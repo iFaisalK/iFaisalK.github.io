@@ -16,7 +16,9 @@
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -42,28 +44,34 @@
 
     <!-- HERO -->
     <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
       <div class="wrap hero__inner">
         <div class="hero__text">
-          <p class="eyebrow reveal"><span class="dot"></span> Software Engineer · IBM</p>
-          <h1 class="hero__title reveal" style="--d:.06s">
-            <span>Software engineer</span>
-            <span>at IBM, building</span>
-            <span><em>reliable systems.</em></span>
+          <p class="eyebrow reveal">
+            <img src="assets/ibm-logo.svg" alt="IBM" class="ibm-chip" width="37" height="16" />
+            <span class="div"></span>
+            <span class="dot"></span> Available for work
+          </p>
+          <h1 class="hero__title reveal">
+            <span class="line"><span style="--d:.05s">Software</span></span>
+            <span class="line"><span style="--d:.12s">engineer at</span></span>
+            <span class="line"><span style="--d:.19s" class="grad">IBM.</span></span>
           </h1>
-          <p class="hero__lede reveal" style="--d:.16s">
+          <p class="hero__lede reveal" style="--d:.42s">
             I work across backend, cloud and applied AI — turning ambiguous problems into well-built,
             well-tested software. Previously a full-stack developer.
           </p>
-          <div class="hero__cta reveal" style="--d:.24s">
-            <a class="btn btn--solid" href="work.html">See selected work</a>
+          <div class="hero__cta reveal" style="--d:.52s">
+            <a class="btn btn--grad" href="work.html">See selected work</a>
             <a class="btn" href="Faisal-Khan-Resume.pdf" target="_blank" rel="noopener">Résumé <span aria-hidden="true">↗</span></a>
           </div>
         </div>
 
-        <div class="hero__portrait reveal" style="--d:.18s">
-          <div class="frame"><img src="assets/portrait.png" alt="Portrait of Faisal Khan" width="612" height="612" /></div>
-          <div class="hero__badge">
-            <img src="assets/ibm-logo.svg" alt="IBM" class="hero__badge-logo" width="48" height="21" />
+        <div class="hero__portrait reveal" style="--d:.22s">
+          <div class="blob"><img src="assets/portrait.png" alt="Portrait of Faisal Khan" width="612" height="612" /></div>
+          <div class="hero__chip">
+            <img src="assets/ibm-logo.svg" alt="IBM" width="44" height="19" />
+            <span class="bar"></span>
             <span>Software Engineer</span>
           </div>
         </div>

@@ -34,16 +34,17 @@
   }
 
   /* ---------- scroll reveal ---------- */
+  var SHOT = location.search.indexOf("shot") !== -1; // screenshot helper: reveal all at once
   var reveals = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window) {
+  if (SHOT || !("IntersectionObserver" in window)) {
+    reveals.forEach(function (el) { el.classList.add("in"); });
+  } else {
     var ro = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (en.isIntersecting) { en.target.classList.add("in"); ro.unobserve(en.target); }
       });
     }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
     reveals.forEach(function (el) { ro.observe(el); });
-  } else {
-    reveals.forEach(function (el) { el.classList.add("in"); });
   }
 
   /* ---------- copy email ---------- */
