@@ -1,5 +1,5 @@
 /* ============================================================
-   Faisal Khan — Portfolio · v5
+   Faisal Khan Portfolio · v5
    Navy & white. Solid colour, no gradients. Clean & professional.
    ============================================================ */
 
@@ -100,8 +100,10 @@ strong { font-weight: 600; }
 /* ============================================================ HERO (navy) */
 .hero { background: var(--navy); color: #fff; position: relative; overflow: hidden; }
 .hero__inner { position: relative; z-index: 1; display: grid; grid-template-columns: 1.25fr .85fr; gap: clamp(32px, 6vw, 84px); align-items: center; padding-top: clamp(56px, 9vh, 120px); padding-bottom: clamp(60px, 10vh, 130px); }
-.eyebrow { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 12.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--on-navy-2); border: 1px solid var(--line-navy); padding: 8px 8px 8px 14px; border-radius: 100px; margin-bottom: clamp(22px, 4vh, 34px); }
-.eyebrow .ibm-chip { height: 15px; width: auto; display: block; filter: brightness(0) invert(1); }
+.eyebrow { display: inline-flex; align-items: center; gap: 9px; font-weight: 600; font-size: 12.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--on-navy-2); border: 1px solid var(--line-navy); padding: 7px 16px; border-radius: 100px; margin-bottom: clamp(22px, 4vh, 34px); }
+.eyebrow--ibm { padding-left: 6px; }
+.eyebrow .ibm-pill { display: inline-flex; align-items: center; background: #fff; border-radius: 6px; padding: 5px 9px; }
+.eyebrow .ibm-pill img { height: 16px; width: auto; display: block; }
 .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: #4f7fd6; }
 .eyebrow .div { width: 1px; height: 14px; background: var(--line-navy); }
 
@@ -116,7 +118,7 @@ strong { font-weight: 600; }
 .hero__portrait img { width: 100%; height: auto; display: block; aspect-ratio: 1; object-fit: cover; filter: grayscale(1) contrast(1.05) brightness(1.02); }
 .hero__portrait .accent-block { position: absolute; right: -16px; top: -16px; width: 78px; height: 78px; border: 2px solid rgba(255,255,255,.3); border-radius: 16px; z-index: -1; }
 .hero__chip { position: absolute; left: -14px; bottom: 22px; display: flex; align-items: center; gap: 11px; background: #fff; border-radius: 12px; padding: 11px 15px; box-shadow: var(--shadow); }
-.hero__chip img { height: 18px; width: auto; display: block; }
+.hero__chip img { height: 21px; width: auto; display: block; }
 .hero__chip span { font-weight: 600; font-size: 12.5px; color: var(--ink-2); }
 .hero__chip .bar { width: 1px; height: 17px; background: var(--line); }
 
