@@ -4,14 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Work — Faisal Khan</title>
-  <meta name="description" content="Selected work — the serverless, multi-market regulatory content-review platform Faisal Khan builds at IBM on AWS and Amazon Bedrock." />
+  <meta name="description" content="Selected work — production GenAI on AWS at IBM: LLM integration, RAG, guardrails, model tuning, serverless and CI/CD." />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -27,7 +25,7 @@
         <a href="contact.html">Contact</a>
       </nav>
       <div class="header-aside">
-        <a class="header-cta" href="contact.html">Get in touch <span aria-hidden="true">→</span></a>
+        <a class="header-cta" href="contact.html">Get in touch</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
       </div>
     </div>
@@ -35,18 +33,22 @@
 
   <main id="main"><span id="top"></span>
 
-    <section class="page-header wrap">
-      <p class="eyebrow reveal"><span class="dot"></span> Application Developer @ IBM</p>
-      <h1 class="page-title reveal" style="--d:.06s">Building production <em class="grad">GenAI</em> on AWS at&nbsp;IBM.</h1>
-      <p class="page-lede reveal" style="--d:.12s">
-        At IBM I integrate large language models into enterprise applications — retrieval-augmented
-        generation, AI guardrails, and model tuning — on a serverless AWS stack, shipped through a
-        disciplined CI/CD pipeline.
-      </p>
+    <section class="page-header on-navy">
+      <div class="wrap page-header__inner">
+        <p class="eyebrow reveal">
+          <img src="assets/ibm-logo.svg" alt="IBM" class="ibm-chip" width="35" height="15" />
+          <span class="div"></span> Selected Work
+        </p>
+        <h1 class="page-title reveal" style="--d:.06s">Building production GenAI on AWS at&nbsp;IBM.</h1>
+        <p class="page-lede reveal" style="--d:.12s">
+          At IBM I integrate large language models into enterprise applications — retrieval-augmented
+          generation, AI guardrails, and model tuning — on a serverless AWS stack, shipped through a
+          disciplined CI/CD pipeline.
+        </p>
+      </div>
     </section>
 
     <section class="section section--tight wrap">
-      <!-- Architecture diagram -->
       <figure class="diagram reveal" aria-labelledby="diagram-cap">
         <div class="diagram__tag">Retrieval-augmented generation</div>
         <svg class="arch" viewBox="0 0 980 126" role="img" aria-labelledby="diagram-cap" preserveAspectRatio="xMidYMid meet">
@@ -66,38 +68,32 @@
       </figure>
 
       <ol class="cases">
-        <li class="case reveal">
-          <span class="case__num">01</span>
+        <li class="case reveal"><span class="case__num">01</span>
           <div class="case__body"><h3>Generative AI integration</h3>
             <p>Integrating large language models — Amazon Bedrock and Anthropic Claude — into enterprise applications, with multiple retrieval strategies and an extended-reasoning mode.</p></div>
           <ul class="case__tags"><li>Bedrock</li><li>Claude</li><li>LLM</li></ul>
         </li>
-        <li class="case reveal">
-          <span class="case__num">02</span>
+        <li class="case reveal"><span class="case__num">02</span>
           <div class="case__body"><h3>Retrieval-augmented generation</h3>
             <p>RAG over domain knowledge bases — embeddings and semantic retrieval with content segregation by business function — for grounded, relevant answers.</p></div>
           <ul class="case__tags"><li>RAG</li><li>Embeddings</li><li>Knowledge bases</li></ul>
         </li>
-        <li class="case reveal">
-          <span class="case__num">03</span>
+        <li class="case reveal"><span class="case__num">03</span>
           <div class="case__body"><h3>AI guardrails &amp; validation</h3>
             <p>Automated validation with feedback loops keeps model outputs accurate, safe and on-policy — turning probabilistic models into dependable workflows.</p></div>
           <ul class="case__tags"><li>Guardrails</li><li>Validation</li><li>Reliability</li></ul>
         </li>
-        <li class="case reveal">
-          <span class="case__num">04</span>
+        <li class="case reveal"><span class="case__num">04</span>
           <div class="case__body"><h3>Model tuning &amp; prompt engineering</h3>
             <p>Migrating and tuning models with dynamic prompt configurations and evaluation — getting the right behaviour from the right model for each market.</p></div>
           <ul class="case__tags"><li>Prompt eng.</li><li>Tuning</li><li>Evaluation</li></ul>
         </li>
-        <li class="case reveal">
-          <span class="case__num">05</span>
+        <li class="case reveal"><span class="case__num">05</span>
           <div class="case__body"><h3>Serverless AWS backend</h3>
             <p>Python on AWS Lambda with S3, DynamoDB, SQS and API Gateway — scalable, event-driven services powering the AI features behind the scenes.</p></div>
           <ul class="case__tags"><li>Lambda</li><li>DynamoDB</li><li>S3</li><li>SQS</li></ul>
         </li>
-        <li class="case reveal">
-          <span class="case__num">06</span>
+        <li class="case reveal"><span class="case__num">06</span>
           <div class="case__body"><h3>CI/CD &amp; delivery</h3>
             <p>Shipping through a disciplined pipeline — Jenkins, SonarQube and JFrog — with Git branching across development, QA and production.</p></div>
           <ul class="case__tags"><li>Jenkins</li><li>SonarQube</li><li>JFrog</li><li>Git</li></ul>
@@ -106,12 +102,14 @@
     </section>
 
     <div class="cta-band wrap">
-      <div class="cta-card reveal">
-        <h2>Curious about the <em>rest of the stack?</em></h2>
-        <p>See my full background, experience and skills — or get in touch directly.</p>
-        <div class="hero__cta">
-          <a class="btn btn--solid" href="about.html">About me</a>
-          <a class="btn" href="contact.html">Get in touch</a>
+      <div class="cta-card on-navy">
+        <div class="cta-card__in">
+          <h2>Curious about the rest of the stack?</h2>
+          <p>See my full background, experience and skills — or get in touch directly.</p>
+          <div class="hero__cta">
+            <a class="btn btn--solid" href="about.html">About me</a>
+            <a class="btn btn--ghost" href="contact.html">Get in touch</a>
+          </div>
         </div>
       </div>
     </div>
