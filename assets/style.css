@@ -242,3 +242,51 @@ strong { font-weight: 600; }
   .track { height: 54px; }
   .node:nth-child(4){ left: 22%; } .node:nth-child(6){ left: 78%; }
 }
+
+/* ============================================================
+   v8 revamp: bold full-bleed IBM-blue hero + inverted header
+   ============================================================ */
+.hero { position: relative; color: #fff; padding-top: clamp(86px, 13vh, 158px); padding-bottom: clamp(56px, 9vh, 108px); }
+.hero::before { content: ""; position: absolute; left: 50%; transform: translateX(-50%); width: 100vw; top: -70px; bottom: 0; background: var(--ibm); z-index: -2; }
+.hero::after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); width: 100vw; top: -70px; bottom: 0; z-index: -1; pointer-events: none;
+  background-image: radial-gradient(rgba(255,255,255,.12) 1.25px, transparent 1.25px); background-size: 30px 30px;
+  -webkit-mask-image: linear-gradient(#000, transparent 85%); mask-image: linear-gradient(#000, transparent 85%);
+  animation: heroDrift 28s linear infinite; }
+@keyframes heroDrift { to { background-position: 0 120px; } }
+.hero h1 { color: rgba(255,255,255,.92); font-size: clamp(3.2rem, 8.6vw, 7.2rem); font-weight: 700; max-width: 15ch; }
+.hero h1 .b { color: #fff; }
+.hero .eyebrow { color: rgba(255,255,255,.85); }
+.hero .eyebrow .ibm-mark { filter: brightness(0) invert(1); }
+.hero .eyebrow .tick { color: rgba(255,255,255,.55); }
+.hero__sub { color: rgba(255,255,255,.82); max-width: 50ch; }
+.hero .btn--solid { background: #fff; color: var(--ibm); border-color: #fff; }
+.hero .btn--solid:hover { background: #e8efff; border-color: #e8efff; }
+.hero .btn--ghost { border-color: rgba(255,255,255,.5); color: #fff; }
+.hero .btn--ghost:hover { border-color: #fff; background: rgba(255,255,255,.12); color: #fff; }
+.hero .pipeline__frame { box-shadow: 0 36px 80px -40px rgba(2, 18, 56, .55); }
+
+.site-header { background: transparent; backdrop-filter: none; }
+.site-header .wordmark { color: #fff; }
+.site-header .wordmark .dot { color: rgba(255,255,255,.65); }
+.site-header .wordmark__mark { filter: brightness(0) invert(1); opacity: .85; }
+.site-header .nav a { color: rgba(255,255,255,.8); }
+.site-header .nav a:hover { color: #fff; }
+.site-header .nav a::after { background: #fff; }
+.site-header .header-cta { background: transparent; border: 1.5px solid rgba(255,255,255,.5); color: #fff; }
+.site-header .header-cta:hover { background: rgba(255,255,255,.14); border-color: #fff; }
+.site-header .menu-toggle span { background: #fff; }
+.site-header.is-stuck { background: color-mix(in srgb, var(--paper) 90%, transparent); backdrop-filter: saturate(140%) blur(12px); border-bottom-color: var(--line); }
+.site-header.is-stuck .wordmark { color: var(--ink); }
+.site-header.is-stuck .wordmark .dot { color: var(--ibm); }
+.site-header.is-stuck .wordmark__mark { filter: none; opacity: .5; }
+.site-header.is-stuck .nav a { color: var(--mute); }
+.site-header.is-stuck .nav a:hover { color: var(--ink); }
+.site-header.is-stuck .nav a::after { background: var(--ibm); }
+.site-header.is-stuck .header-cta { background: var(--ibm); border-color: var(--ibm); color: #fff; }
+.site-header.is-stuck .menu-toggle span { background: var(--ink); }
+
+@media (prefers-reduced-motion: reduce) { .hero::after { animation: none; } }
+@media (max-width: 860px) {
+  .nav { background: var(--ink); border-bottom-color: rgba(255,255,255,.14); }
+  .site-header .nav a, .site-header.is-stuck .nav a { color: rgba(255,255,255,.85); border-bottom-color: rgba(255,255,255,.1); }
+}
