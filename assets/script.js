@@ -67,4 +67,15 @@
       }
     });
   });
+
+  /* ---------- replay the pipeline trace ---------- */
+  var replay = document.getElementById("replay");
+  var pipeline = document.querySelector(".pipeline");
+  if (replay && pipeline) {
+    replay.addEventListener("click", function () {
+      pipeline.classList.remove("run");
+      void pipeline.offsetWidth; /* force reflow to restart CSS animations */
+      pipeline.classList.add("run");
+    });
+  }
 })();

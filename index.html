@@ -24,7 +24,7 @@
 
   <header class="site-header" id="siteHeader">
     <div class="wrap header-inner">
-      <a href="#top" class="wordmark">Faisal Khan<span class="dot">.</span></a>
+      <a href="#top" class="wordmark"><img class="wordmark__mark" src="assets/ibm-logo.svg" alt="" aria-hidden="true" height="12" />Faisal Khan<span class="dot">.</span></a>
       <nav class="nav" aria-label="Primary">
         <a href="#work">Work</a>
         <a href="#experience">Experience</a>
@@ -51,20 +51,31 @@
       </div>
 
       <!-- SIGNATURE: a request flowing through the pipeline -->
-      <div class="pipeline reveal" style="--d:.3s">
+      <div class="pipeline run reveal" style="--d:.3s">
         <div class="pipeline__frame">
           <div class="pipeline__head">
             <span class="t">A request, <b>end to end</b></span>
-            <span class="live">Live</span>
+            <span class="pipeline__head__r">
+              <span class="live">Live</span>
+              <button class="replay" id="replay" type="button" aria-label="Replay trace">Replay ↻</button>
+            </span>
           </div>
           <div class="track">
             <span class="track__line"></span>
+            <span class="track__fill"></span>
             <span class="token"></span>
             <div class="node"><span class="node__dot"></span><span class="node__l">Query</span><span class="node__s">user prompt</span></div>
             <div class="node"><span class="node__dot"></span><span class="node__l">Retrieval</span><span class="node__s">RAG · embeddings</span></div>
             <div class="node"><span class="node__dot"></span><span class="node__l">Bedrock</span><span class="node__s">Claude, the LLM</span></div>
             <div class="node"><span class="node__dot"></span><span class="node__l">Guardrails</span><span class="node__s">validate</span></div>
             <div class="node"><span class="node__dot"></span><span class="node__l">Response</span><span class="node__s">grounded answer</span></div>
+          </div>
+          <div class="ledger" aria-hidden="true">
+            <div class="ledger__l"><span class="ts">00:00.04</span><span class="ev">query received</span><span class="dt">· 142 tok</span></div>
+            <div class="ledger__l"><span class="ts">00:00.31</span><span class="ev">retrieved 6 chunks</span><span class="dt">· cosine 0.89</span></div>
+            <div class="ledger__l"><span class="ts">00:00.55</span><span class="ev">bedrock · claude</span><span class="dt">· streaming</span></div>
+            <div class="ledger__l"><span class="ts">00:01.12</span><span class="ev">guardrail PASS</span><span class="dt">· 0 violations</span></div>
+            <div class="ledger__l"><span class="ts">00:01.40</span><span class="ev">200 OK</span><span class="dt">· grounded</span></div>
           </div>
           <p class="pipeline__cap">The kind of serverless GenAI pipeline I build at IBM, on <b>AWS Lambda, Amazon Bedrock, DynamoDB and S3</b>.</p>
         </div>
@@ -126,14 +137,14 @@
           <div class="row reveal">
             <span class="row__yr">2025 →</span>
             <div class="row__main">
-              <h3 class="row__role">Software Engineer <span class="org">IBM</span> <span class="row__type">Full-time</span></h3>
+              <h3 class="row__role">Software Engineer <img class="org-mark" src="assets/ibm-logo.svg" alt="IBM" height="14" /><span class="row__type">Full-time</span></h3>
               <p class="row__d">Integrate LLMs (Bedrock, Claude) into a production GenAI platform: RAG, guardrails and model tuning. Build the serverless AWS backend and ship via CI/CD with disciplined Git branching.</p>
             </div>
           </div>
           <div class="row reveal">
             <span class="row__yr">2024</span>
             <div class="row__main">
-              <h3 class="row__role">Cloud Full Stack <span class="org">IBM</span> <span class="row__type">Apprenticeship</span></h3>
+              <h3 class="row__role">Cloud Full Stack <img class="org-mark" src="assets/ibm-logo.svg" alt="IBM" height="14" /><span class="row__type">Apprenticeship</span></h3>
               <p class="row__d">Cloud full-stack development across the same platform, ramping into serverless architecture, AWS services and disciplined Git workflows.</p>
             </div>
           </div>
@@ -189,7 +200,8 @@
     <!-- ===================== CONTACT ===================== -->
     <section class="contact" id="contact">
       <div class="wrap contact__in">
-        <p class="eyebrow reveal"><span class="tick">/</span> Contact</p>
+        <img class="contact__mark reveal" src="assets/ibm-logo.svg" alt="IBM" height="22" />
+        <p class="eyebrow reveal" style="--d:.04s"><span class="tick">/</span> Contact</p>
         <h2 class="reveal" style="--d:.05s">Let's build something dependable.</h2>
         <a class="contact__email reveal" style="--d:.1s" href="mailto:faisalak056@gmail.com">faisalak056@gmail.com <span aria-hidden="true">↗</span></a>
         <div class="contact__links reveal" style="--d:.16s">
